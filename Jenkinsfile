@@ -22,9 +22,11 @@ pipeline {
             }
         }
         stage('Test'){
-            sh'''
-                test -f learn-jenkins-app/build
-            '''
+            steps{
+                sh'''
+                    test -f learn-jenkins-app/build
+                '''
+            }    
         }
     }
 }

@@ -12,6 +12,7 @@ pipeline {
 
             steps{
                 sh'''
+                    rm -rf node_modules/
                     test -f build/index.html
                     npm test
                 '''

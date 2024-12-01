@@ -21,5 +21,10 @@ pipeline {
                 '''
             }
         }
+        stage('Test'){
+            sh'''
+                test -f learn-jenkins-app/build
+            '''
+        }
     }
 }

@@ -24,7 +24,7 @@ pipeline {
         stage('Test'){
             steps{
                 sh'''
-                    test -f learn-jenkins-app/build
+                    test -f learn-jenkins-app/build/index.html
                 '''
             }    
         }

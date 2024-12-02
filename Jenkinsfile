@@ -48,6 +48,7 @@ pipeline {
             steps{
                 echo 'Running e2e stage'
                 sh'''
+                    npm cache clean --force
                     npm install serve
                     node_modules/.bin/serve -s build &
                     sleep 10

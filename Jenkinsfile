@@ -46,6 +46,7 @@ pipeline {
             }
 
             steps{
+                echo 'Running e2e stage'
                 sh'''
                     npm install -g serve
                     serve -s build
@@ -56,10 +57,10 @@ pipeline {
 
     }
 
-    post {
-        always{
-            junit 'test-results/junit.xml'
+        post {
+            always{
+                junit 'test-results/junit.xml'
+            }
         }
-    }
 
 }
